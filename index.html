@@ -21,6 +21,11 @@ body[data-theme="dark"]{--paper:#18221e;--surface:#202d26;--ink:#e1e8dd;--muted:
 @media(prefers-reduced-motion:reduce){*,*:before,*:after{scroll-behavior:auto!important;animation:none!important;transition:none!important}}
 @media print{.sidebar,.topbar,.reading-progress,.reading-tools,.outline-panel,.message-tools,.reader-end,.resume-notice{display:none!important}.page{margin:0}main{width:100%;padding:0}.conversation-header{padding-top:0}.message.user{margin-left:0}.prose{font-size:11pt}body{background:white;color:black}.table-scroll{overflow:visible}.prompt-details{display:block}.prompt-details>summary{display:none}}
 
+/* Keep long equations and KaTeX's accessible MathML inside the reading column. */
+.math-inline{display:inline-block;max-width:100%;overflow-x:auto;overflow-y:hidden;vertical-align:middle}
+.math-block{width:100%;min-width:0}
+.prose .katex{position:relative}
+.prose .katex .katex-mathml{left:0;top:0;contain:strict;clip-path:inset(50%)}
 </style>
 </head>
 <body>
